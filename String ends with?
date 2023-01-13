@@ -1,0 +1,14 @@
+function solution(str, ending){
+  return str.endsWith(ending)
+}
+
+// other way
+
+function solution(str, ending){
+  let n = ending.length;
+  let a = str.length;
+  if (str.slice(a - n) === ending) {
+    return true
+  }
+  else return false; 
+}
