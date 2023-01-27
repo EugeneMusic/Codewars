@@ -1,0 +1,20 @@
+function add(num1, num2) {
+  num1 = num1.toString().split("").reverse();
+  num2 = num2.toString().split("").reverse();
+  let num3;
+  if (num1.length >= num2.length) {
+    num3 = num1.map((n, index)=> {
+      if(num2[index] !== undefined) {
+        return (+n + +num2[index])
+      }
+      else return +n
+     })}
+  else {
+    num3 = num2.map((n, index)=> {
+      if(num1[index] !== undefined) {
+        return(+n + +num1[index])
+      }
+      else return +n
+    })};
+  return +num3.reverse().join("");
+}
