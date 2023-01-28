@@ -1,0 +1,11 @@
+function colourAssociation(array){
+  let arr = [];
+  array.forEach((n, index) => {
+    let obj = {};
+    let key = n[0];
+    let value = n[1];
+    obj[`${key}`] = value;
+    arr.push(obj);
+  });
+  return arr;
+}
