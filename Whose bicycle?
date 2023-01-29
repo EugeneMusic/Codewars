@@ -1,0 +1,15 @@
+function whoseBicycle(diary1, diary2, diary3) {
+    const firstSon = {
+    score: Object.values(diary1).reduce((acc, item)=> {return acc += item},0),
+  }
+    const secondSon = {
+    score: Object.values(diary2).reduce((acc, item)=> {return acc += item},0),
+  }
+    const thirdSon = {
+    score: Object.values(diary3).reduce((acc, item)=> {return acc += item},0),
+  }
+  let max = Math.max(firstSon.score,secondSon.score,thirdSon.score);
+  let winner = max === thirdSon.score? "third":
+  max === secondSon.score? "second": "first";
+  return 'I need to buy a bicycle for my ' + winner + ' son.'
+}
