@@ -1,0 +1,3 @@
+function getDecimal(n){
+  return Math.sqrt(n*n) - Math.floor(Math.sqrt(n*n));
+}
