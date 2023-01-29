@@ -1,0 +1,13 @@
+function combine(...params) {
+  let obj ={}
+  params.map(item => {
+    for (let props in item) {
+      if (obj[props] === undefined) {
+        obj[props] = item[props];
+      }
+      else {
+        obj[props] = obj[props] + item[props];
+      }  
+    }
+  })
+  return obj;
