@@ -1,0 +1,8 @@
+function maxTriSum(numbers){
+  let max = numbers.sort((a,b) => b - a).filter((n, index, array) => n !== array[index+1]);
+  let num = 0;
+  for (let i = 0; i < 3; i++) {
+    num += max[i];
+  }
+  return num;
+}
