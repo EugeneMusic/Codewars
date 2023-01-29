@@ -1,0 +1,7 @@
+function nbDig(n, d) {
+  let arr = []
+    for (let k = 0; k <= n; k++) {
+      arr.push(k**2);
+    }
+  return arr.join('').split('').filter( n => n == d).length;
+}
