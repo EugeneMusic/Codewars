@@ -1,0 +1,16 @@
+function sentence(List) {
+  let sentense = [];
+  let sortedKeys = [];
+  List.forEach((n, index) => {
+    sortedKeys.push(Object.keys(n))
+  })
+  sortedKeys = sortedKeys.sort((a, b) => a - b);
+  for (let i = 0; i < List.length; i++) {
+    List.forEach((n, index) => {
+      if (Object.keys(n) == +sortedKeys[i]) {
+        sentense.push(n[Object.keys(n)])
+      }
+    })
+  }
+  return sentense.join(' ');
+}
