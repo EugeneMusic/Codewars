@@ -1,0 +1,11 @@
+function killer(suspectInfo, dead) {
+  let counter = 0;
+  let killerIndexList = Object.values(suspectInfo).map((list, index) => {
+    counter = 0;
+    for (let i = 0; i < dead.length; i++) {
+      if (list.includes(dead[i])) counter++;
+    }
+    if (counter == dead.length) return Object.keys(suspectInfo)[index]
+  }).filter(el => el != undefined)[0]
+  return killerIndexList
+}
