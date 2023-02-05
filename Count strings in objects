@@ -1,0 +1,16 @@
+function strCount(obj){
+  let counter = 0;
+  function recurs(object) {
+    let valuesArr = Object.values(object);
+    if (valuesArr.length === 0) return counter;
+    counter += valuesArr.filter(el => typeof el === `string`).length;
+    let objArr = valuesArr.filter(el => typeof el === `object`)
+    .filter(el => el !== null)
+    .filter(el => Object.keys(el)
+            .length !== 0)
+    objArr = objArr.map(obj => recurs(obj))
+    if (objArr.length === 0) return counter;
+    else return recurs(objArr)
+}
+  return recurs(obj)
+  }
