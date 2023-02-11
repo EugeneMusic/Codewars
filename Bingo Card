@@ -1,0 +1,26 @@
+function getCard() {
+    let bingo = [];
+  for (let i = 0; i < 24; i++) {
+    if (i < 5) {
+      let num ='B' + (Math.round(Math.random() * 14) + 1);
+      bingo.includes(num) ? i-- : bingo.push(num)
+    }
+    else if (i < 10) {
+      let num ='I' + (Math.round(Math.random() * 14) + 16);
+      bingo.includes(num) ? i-- : bingo.push(num)
+    }
+    else if (i < 14) {
+      let num ='N' + (Math.round(Math.random() * 14) + 31);
+      bingo.includes(num) ? i-- : bingo.push(num)
+    }
+    else if (i < 19) {
+            let num ='G' + (Math.round(Math.random() * 14) + 46);
+      bingo.includes(num) ? i-- : bingo.push(num)
+    }
+    else {
+      let num ='O' + (Math.round(Math.random() * 14) + 61);
+      bingo.includes(num) ? i-- : bingo.push(num)
+    }
+  }
+    return bingo
+}
